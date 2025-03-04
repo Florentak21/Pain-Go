@@ -2,8 +2,8 @@
 
     /* DATABASE CONNECTION STRING */
     $hostname = 'localhost';
-    $username = '';
-    $password = '';
+    $username = 'florentak';
+    $password = 'florentak@localHost@2003';
     $db = "pain_go";
     try {
         $database = new PDO("mysql:dbname=$db;host=$hostname", $username, $password, [
