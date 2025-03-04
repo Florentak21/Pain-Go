@@ -7,7 +7,7 @@
     session_start();
 
     # Set the page title dynamically
-    $title = basename($_SERVER['PHP_SELF']);
+    $title = basename($_SERVER['PHP_SELF'], ".php");
 
     # Process the form if it is submitted
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -50,7 +50,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?= $title ?></title>
+    <title><?= ucfirst($title) . ' Page' ?></title>
 </head>
 <body>
     <h1>Create an Account</h1>
